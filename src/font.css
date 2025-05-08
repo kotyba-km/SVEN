@@ -1,0 +1,15 @@
+@font-face {
+  font-family: Wahran-Light;
+  src: local('Wahran-Light'),
+    url('./fonts/Wahran-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: Wahran-Light;
+  src: local('Wahran-Light'),
+    url('./fonts/Wahran-Light.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
