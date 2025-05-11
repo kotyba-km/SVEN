@@ -77,7 +77,7 @@ export default function Navbar() {
                 />
               </Col>
               <div
-                className={`w-75 h-25 bg-white position-absolute rounded-5 d-flex justify-content-start align-items-center opacity-75 overflow-hidden ${styles.searchWrap}`}
+                className={`w-75 bg-white position-absolute rounded-5 d-flex justify-content-start align-items-center opacity-75 overflow-hidden ${styles.searchWrap}`}
                 style={{
                   border: isFocused ? "2px solid #55C7E6 " : "2px solid black ",
                 }}
@@ -123,10 +123,11 @@ export default function Navbar() {
       >
         <Row className="w-100 h-100 d-flex justify-content-center">
           <Col
+            style={{ borderLeft: "2px solid black" }}
             xs={12}
             sm={3}
             md={2}
-            className={`d-flex flex-column justify-content-center align-items-center border-2 border-start border-black ${styles.panel}`}
+            className={`d-flex flex-column justify-content-center align-items-center ${styles.panel}`}
           >
             <a className={`${styles.panelLink}`} href="#">
               <FontAwesomeIcon icon={faBell} />
@@ -134,10 +135,14 @@ export default function Navbar() {
             </a>
           </Col>
           <Col
+            style={{
+              borderRight: "2px solid black",
+              borderLeft: "2px solid black",
+            }}
             xs={12}
             sm={3}
             md={2}
-            className={`d-flex flex-column justify-content-center align-items-center border-2 border-start border-end border-black ${styles.panel}`}
+            className={`d-flex flex-column justify-content-center align-items-center ${styles.panel}`}
           >
             <a className={`${styles.panelLink}`} href="#">
               <FontAwesomeIcon icon={faHouse} />
@@ -145,10 +150,11 @@ export default function Navbar() {
             </a>
           </Col>
           <Col
+            style={{ borderRight: "2px solid black" }}
             xs={12}
             sm={3}
             md={2}
-            className={` d-flex flex-column justify-content-center align-items-center border-2 border-end border-black ${styles.panel}`}
+            className={` d-flex flex-column justify-content-center align-items-center ${styles.panel}`}
           >
             <a className={`${styles.panelLink}`} href="#">
               <FontAwesomeIcon icon={faIdCard} />

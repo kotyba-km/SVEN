@@ -14,9 +14,6 @@ body {
   height: 250px;
   background-color: whitesmoke;
 }
-.logoWrap {
-
-}
 .logo {
   width: 60%;
 }
@@ -32,13 +29,11 @@ body {
   font-family: 'Bank Gothic Light', sans-serif;
   font-family: 'BankGothic', sans-serif;
 }
-.searchImagesWrap {
- 
-}
 .searchImages {
   filter: brightness(0.85);
 }
 .searchWrap {
+  height: 25%;
 }
 .searchInput {
   outline: none;
@@ -47,8 +42,6 @@ body {
   height: 60px;
   border-top: 1.5px solid black;
   border-bottom: 1.5px solid black;
-}
-.panel {
 }
 .panelLink {
   display: flex;
@@ -68,7 +61,84 @@ body {
   scale: 1.05;
 }
 @media (max-width: 1400px) {
-
+  .sloganAr {
+    font-size: 2.5rem;
+  }
+  .sloganEn {
+    font-size: 0.9rem
+  }
+  .logo {
+    width: 75%
+  }
+}
+@media (max-width: 1200px) {
+  .sloganAr {
+    font-size: 2.2rem;
+  }
+  .sloganEn {
+    font-size: 0.8rem
+  }
+  .logo {
+    width: 75%
+  }
+}
+@media (max-width: 992px) {
+  .navbar {
+    height: 400px;
+  }
+  .searchWrap {
+    height: 35%;
+  }
+  .sloganAr {
+    font-size: 2.8rem;
+  }
+  .sloganEn {
+    font-size: 1rem
+  }
+  .logo {
+    width: 60%
+  }
+}
+@media (max-width: 576px) {
+  body,html {
+    width: 100dvw;
+    overflow-x: hidden;
+  }
+  .searchWrap {
+    height: 50%; 
+  }
+  .sloganAr {
+    font-size: 2.2rem;
+  }
+  .sloganEn {
+    font-size:0.8rem;
+  }
+  .logo {
+    width: 30%;
+  }
+  .panels {
+    height: 160px;
+  }
+  .panel {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: 0.5px solid black ;
+    border-bottom: 0.5px solid black ;
+  }
+}
+@media (max-width: 450px) {
+  .navbar {
+    height: 280px;
+  }
+  .sloganAr {
+    font-size: 1.5rem;
+  }
+  .sloganEn {
+    font-size:0.55rem;
+  }
+  .logo {
+    width: 25%;
+  }
 }
 /* .navbar{
   width: 100dvw;
