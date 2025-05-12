@@ -46,7 +46,7 @@ export default function Navbar() {
           >
             <Row
               style={{ height: "80%" }}
-              className={`w-100 overflow-hidden bg-dark rounded-5 position-relative d-flex justify-content-center align-items-center ${styles.searchImagesWrap}`}
+              className={`w-100 overflow-hidden bg-dark position-relative d-flex justify-content-center align-items-center ${styles.searchImagesWrap}`}
             >
               <Col className="p-0 h-100">
                 <img

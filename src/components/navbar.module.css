@@ -29,6 +29,9 @@ body {
   font-family: 'Bank Gothic Light', sans-serif;
   font-family: 'BankGothic', sans-serif;
 }
+.searchImagesWrap {
+  border-radius: 2rem;
+}
 .searchImages {
   filter: brightness(0.85);
 }
@@ -130,6 +133,9 @@ body {
   .navbar {
     height: 280px;
   }
+  .searchImagesWrap {
+    border-radius: 1.5rem;
+  }
   .sloganAr {
     font-size: 1.5rem;
   }
@@ -140,125 +146,3 @@ body {
     width: 25%;
   }
 }
-/* .navbar{
-  width: 100dvw;
-  height: 32dvh;
-}
-.navP1{
-  display: grid;
-  width: 100%;
-  height:75%;
-  align-items: center;
-  grid-template-columns: 25% 50% 25%;
-  border-bottom: 3px solid black;
-  box-sizing: border-box;
-}
-.logoWrapper{
-  justify-self: center;
-}
-.searchWrapper{
-  grid-column: 2/3;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 100%;
-  height: 80%;
-  background-color: salmon;
-  align-items: center;
-  border-radius: 25px;
-  position: relative;
-  padding: 0;
-  overflow: hidden;
-}
-.searchWrapper img {
-  width: 100%;
-  height: 100%;
-  filter: brightness(0.9);
-}
-.searchBar{
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 0 15px;
-  box-sizing: border-box;
-  grid-column: 1/5;
-  height: 30%;
-  width: 75%;
-  background-color: white;
-  opacity: 0.85;
-  border: 2.5px solid rgb(0, 0, 0); 
-  justify-self: center;
-  border-radius: 50px;
-  position: absolute;
-  z-index: 2;
-  transition: border 0.2s;
-}
-.searchText{
-  height: 80%;
-  width: 90%;
-  justify-self: center;
-  margin: 0 auto;
-  border: none;
-  border-left: 2px solid black;
-  padding-left: 10px;
-  box-sizing: border-box;
-  font-size: 1.5rem;
-  font-family: 'Wahran-Light', sans-serif;
-}
-.searchText:focus-visible {
-  outline: none;
-}
-.sloganWrapper{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.sloganAR {
-  font-size: 3.5rem;
-  font-family: 'Wahran-Light';
-  font-weight: bolder;
-}
-.sloganEN{
-  border-top: 2px black solid;
-  font-size: 1.5rem;
-  font-family: 'BankGothic Md BT', sans-serif;
-  font-family: 'Bank Gothic Light', sans-serif;
-  font-family: 'BankGothic', sans-serif;
-}
-.panelsWrapper {
-  height: 25%;
-  width: 100dvw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 3px solid black;
-}
-.panels {
-  display: grid;
-  grid-template:1fr / 1fr 1fr 1fr ;
-  width: 40%;
-  height: 90%;
-}
-.panelsWrapper .panels a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Wahran-Light';
-  font-size: larger;
-  color: black;
-  text-decoration: none;
-  box-sizing: border-box;
-  border-left: 1px solid black ;
-  border-right: 1px solid black ;
-  transition: all 0.18s;
-}
-.panels a:hover {
-  color: #55C7E6;
-  font-size: x-large;
-}
-.panels a:active {
-  color: #9ed0de;
-  font-size: larger;
-  transition: active 0.1s;
-}  */
