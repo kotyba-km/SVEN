@@ -1,5 +1,5 @@
-import styles from "./hero.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./hero.module.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 export default function Hero() {
