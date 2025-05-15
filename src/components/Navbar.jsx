@@ -14,6 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 export default function Navbar() {
   const [isFocused, setIsFocused] = useState(false);
   return (
@@ -129,10 +130,14 @@ export default function Navbar() {
             md={2}
             className={`d-flex flex-column justify-content-center align-items-center ${styles.panel}`}
           >
-            <a className={`${styles.panelLink}`} href="#">
+            <Link
+              to={"/notifications"}
+              className={`${styles.panelLink}`}
+              href="#"
+            >
               <FontAwesomeIcon icon={faBell} />
               الإشعارات
-            </a>
+            </Link>
           </Col>
           <Col
             style={{
@@ -144,10 +149,10 @@ export default function Navbar() {
             md={2}
             className={`d-flex flex-column justify-content-center align-items-center ${styles.panel}`}
           >
-            <a className={`${styles.panelLink}`} href="#">
+            <Link to={"/home"} className={`${styles.panelLink}`} href="#">
               <FontAwesomeIcon icon={faHouse} />
               الصفحة الرئيسية
-            </a>
+            </Link>
           </Col>
           <Col
             style={{ borderRight: "2px solid black" }}
@@ -156,10 +161,10 @@ export default function Navbar() {
             md={2}
             className={` d-flex flex-column justify-content-center align-items-center ${styles.panel}`}
           >
-            <a className={`${styles.panelLink}`} href="#">
+            <Link to={"/profile"} className={`${styles.panelLink}`} href="#">
               <FontAwesomeIcon icon={faIdCard} />
               منشوراتي
-            </a>
+            </Link>
           </Col>
         </Row>
       </div>
