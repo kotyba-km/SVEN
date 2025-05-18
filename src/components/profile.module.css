@@ -1,4 +1,26 @@
-
 .bgSmoke {
+  background-color: whitesmoke !important;
+}
+.tabPosts {
+  background-color: #d1d1d1;
+  border-bottom: 1px solid black;
+}
+.tabImportant {
+  background-color: #d1d1d1;
+  border-bottom: 1px solid #0000007a
+}
+.active {
   background-color: whitesmoke;
+  border-bottom: none;
+  border-top: 1px solid #0000007a;
+}
+.tabPosts:hover, .tabImportant:hover {
+  filter: brightness(0.98);
+  cursor: pointer;
+}
+.tabPostsContent {
+
+}
+.tabImportanContent {
+  display: none;
 }
