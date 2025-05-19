@@ -1,22 +1,32 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./profile.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import { useState } from "react";
+import ListGroup from "react-bootstrap/ListGroup";
+import { faGear, faQuestion } from "@fortawesome/free-solid-svg-icons";
+import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons/faQuestionCircle";
+import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons/faExclamationCircle";
 export default function ProfileHero() {
+  const [toggleState, setToggleState] = useState(1);
+  const toggleTab = (index) => {
+    setToggleState(index);
+  };
   return (
     <div className={`w-100 ${styles.bgSmoke}`}>
-      <Container className={``}>
+      <Container className={`pt-4`}>
         <Row>
           <Col
             lg={4}
             className="d-flex justify-content-center align-items-center"
           >
             <Card
-              className={`w-100 d-flex justify-content-center align-items-center p-3 ${styles.bgSmoke}`}
+              className={`w-100 d-flex justify-content-center align-items-center p-3 bg-white mb-5 ${styles.bgSmoke}`}
             >
               <Card.Img
                 className="w-75 rounded-circle mb-4"
@@ -52,6 +62,26 @@ export default function ProfileHero() {
                   <h6>0</h6>
                 </Col>
               </Row>
+              <ListGroup className="w-100 text-end mt-4">
+                <ListGroup.Item className={`${styles.cardListItem}`}>
+                  إعدادات
+                  <i className="ms-3">
+                    <FontAwesomeIcon icon={faGear} />
+                  </i>
+                </ListGroup.Item>
+                <ListGroup.Item className={`${styles.cardListItem}`}>
+                  المساعدة والدعم
+                  <i className="ms-3">
+                    <FontAwesomeIcon icon={faQuestionCircle} />
+                  </i>
+                </ListGroup.Item>
+                <ListGroup.Item className={`${styles.cardListItem}`}>
+                  حول
+                  <i className="ms-3">
+                    <FontAwesomeIcon icon={faExclamationCircle} />
+                  </i>
+                </ListGroup.Item>
+              </ListGroup>
             </Card>
           </Col>
           <Col
@@ -62,11 +92,19 @@ export default function ProfileHero() {
               style={{ gap: "1.5px", backgroundColor: "#0000007a" }}
               className={`w-100`}
             >
-              <Col className={`text-center py-1 ${styles.tabImportant}`}>
+              <Col
+                onClick={() => toggleTab(2)}
+                className={`text-center py-1 ${styles.tabImportant} ${
+                  toggleState === 2 ? styles.active : ""
+                }`}
+              >
                 مهمة
               </Col>
               <Col
-                className={`text-center py-1 ${styles.tabPosts} ${styles.active}`}
+                onClick={() => toggleTab(1)}
+                className={`text-center py-1 ${styles.tabPosts} ${
+                  toggleState === 1 ? styles.active : ""
+                }`}
               >
                 منشوراتي
               </Col>
@@ -74,7 +112,9 @@ export default function ProfileHero() {
             <Row className="w-100 h-100">
               <Col
                 xl={12}
-                className={`h-100 text-center mt-5 ${styles.tabPostsContent}`}
+                className={`text-center mt-5 ${styles.tabPostsContent} ${
+                  toggleState === 1 ? styles.contentActive : ""
+                }`}
               >
                 Tab 1 <br /> Lorem ipsum dolor sit amet consectetur adipisicing
                 elit. Laboriosam quis doloribus sit, consequuntur placeat illo
@@ -83,9 +123,11 @@ export default function ProfileHero() {
               </Col>
               <Col
                 xl={12}
-                className={`h-100 text-center mt-5 ${styles.tabImportantContent}`}
+                className={`text-center mt-5 ${styles.tabImportantContent} ${
+                  toggleState === 2 ? styles.contentActive : ""
+                }`}
               >
-                Tab 1 <br /> Lorem ipsum dolor sit amet consectetur adipisicing
+                Tab 2 <br /> Lorem ipsum dolor sit amet consectetur adipisicing
                 elit. Facere quisquam, tempora voluptatum neque at officia sunt
                 corrupti esse earum fugit temporibus tenetur, doloremque ratione
                 aliquid asperiores. Explicabo, necessitatibus ex.

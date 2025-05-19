@@ -3,24 +3,46 @@
 }
 .tabPosts {
   background-color: #d1d1d1;
-  border-bottom: 1px solid black;
+  border-bottom: 1.5px solid #0000007a;
+  transition: all 0.15s;
+  box-sizing: border-box;
 }
 .tabImportant {
   background-color: #d1d1d1;
-  border-bottom: 1px solid #0000007a
+  border-bottom: 1.5px solid #0000007a;
+  transition: all 0.15s;
+  box-sizing: border-box;
 }
 .active {
   background-color: whitesmoke;
-  border-bottom: none;
-  border-top: 1px solid #0000007a;
+  border-bottom: none !important;
+  border-top: 1.5px solid #0000007a;
 }
 .tabPosts:hover, .tabImportant:hover {
   filter: brightness(0.98);
   cursor: pointer;
 }
 .tabPostsContent {
-
+ display: none;
 }
-.tabImportanContent {
+.tabImportantContent {
   display: none;
+}
+.contentActive {
+  display: block;
+}
+.cardListItem:hover {
+  filter: brightness(0.95);
+  cursor: pointer;
+}
+.cardListItem::after {
+  content: '\221F';
+  display: inline;
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  rotate: -45deg;
+}
+.cardListItem:last-of-type::after {
+  content: '';
 }
