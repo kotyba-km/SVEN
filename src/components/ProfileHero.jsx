@@ -18,8 +18,8 @@ export default function ProfileHero() {
     setToggleState(index);
   };
   return (
-    <div className={`w-100 ${styles.bgSmoke}`}>
-      <Container className={`pt-4`}>
+    <div className={`w-100 d-flex justify-content-center ${styles.bgSmoke}`}>
+      <Container className={`w-100 pt-4 mx-0`}>
         <Row>
           <Col
             lg={4}
@@ -116,10 +116,11 @@ export default function ProfileHero() {
                   toggleState === 1 ? styles.contentActive : ""
                 }`}
               >
-                Tab 1 <br /> Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Laboriosam quis doloribus sit, consequuntur placeat illo
-                quidem! Eveniet vel numquam asperiores nulla quis expedita sint
-                explicabo ducimus! Repellat suscipit veniam accusamus!
+                <Row className="w-100 h-100 gap-2 bg-warning">
+                  <Col className={`h-50 ${styles.myPosts} `}></Col>
+                  <Col className={`h-50 ${styles.myPosts} `}></Col>
+                  <Col className={`h-50 ${styles.myPosts} `}></Col>
+                </Row>
               </Col>
               <Col
                 xl={12}
@@ -127,14 +128,11 @@ export default function ProfileHero() {
                   toggleState === 2 ? styles.contentActive : ""
                 }`}
               >
-                Tab 2 <br /> Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Facere quisquam, tempora voluptatum neque at officia sunt
-                corrupti esse earum fugit temporibus tenetur, doloremque ratione
-                aliquid asperiores. Explicabo, necessitatibus ex.
-                Necessitatibus? Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Unde nemo voluptas eum non laborum eveniet
-                omnis, eligendi recusandae, fuga enim veritatis aliquam
-                doloremque, quas beatae in blanditiis vitae accusamus dolores.
+                <Row className="w-100 h-100 gap-2 bg-danger">
+                  <Col className={`h-50 ${styles.myPosts} `}></Col>
+                  <Col className={`h-50 ${styles.myPosts} `}></Col>
+                  <Col className={`h-50 ${styles.myPosts} `}></Col>
+                </Row>
               </Col>
             </Row>
           </Col>

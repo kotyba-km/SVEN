@@ -31,6 +31,10 @@
 .contentActive {
   display: block;
 }
+.myPosts {
+  border: 4px solid gray;
+  background-color: lightgray;
+}
 .cardListItem:hover {
   filter: brightness(0.95);
   cursor: pointer;
