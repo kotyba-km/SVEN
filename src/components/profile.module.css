@@ -1,5 +1,18 @@
+body, html {
+  overflow-x: hidden;
+}
 .bgSmoke {
   background-color: whitesmoke !important;
+}
+.RowContainer {
+
+}
+.acountContainer {
+
+}
+.postsContainer {
+  border: 1.5px solid #0000007a;
+  border-top: none;
 }
 .tabPosts {
   background-color: #d1d1d1;
@@ -23,15 +36,22 @@
   cursor: pointer;
 }
 .tabPostsContent {
- display: none;
+  padding-right: 0;
+  padding-left: 0;
+  display: none !important;
 }
 .tabImportantContent {
-  display: none;
+  padding-right: 0;
+  padding-left: 0;
+  display: none !important;
 }
 .contentActive {
-  display: block;
+  display: flex !important;
 }
 .myPosts {
+  height: 297px;
+  margin: 5px ;
+  box-sizing: border-box;
   border: 4px solid gray;
   background-color: lightgray;
 }
@@ -49,4 +69,36 @@
 }
 .cardListItem:last-of-type::after {
   content: '';
+}
+@media (max-width: 992px) {
+  .profileContainer{
+    min-width: 100% !important;
+  }
+  .acountContainer {
+    padding-left: 0px ;
+  }
+}
+@media (max-width: 768px) {
+  .profileContainer{
+    min-width: 100% !important;
+    margin: 0 auto;
+  }
+  .cardImg {
+    width: 50% !important;
+  }
+  .acountContainer {
+    padding: 0;
+  }
+}
+@media (max-width: 576px) {
+  .myPosts {
+    height: 200px;
+    margin: 2px;
+  }
+}
+@media (max-width: 450px) {
+  .myPosts {
+    height: 180px;
+    margin: 0.5px;
+  }
 }

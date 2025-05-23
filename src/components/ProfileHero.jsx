@@ -19,30 +19,31 @@ export default function ProfileHero() {
   };
   return (
     <div className={`w-100 d-flex justify-content-center ${styles.bgSmoke}`}>
-      <Container className={`w-100 pt-4 mx-0`}>
-        <Row>
+      <Container className={`w-100 pt-4 mx-0 ${styles.profileContainer}`}>
+        <Row className={`justify-content-center`}>
           <Col
-            lg={4}
-            className="d-flex justify-content-center align-items-center"
+            md={4}
+            sm={11}
+            className={`d-flex justify-content-center align-items-center ${styles.acountContainer}`}
           >
             <Card
               className={`w-100 d-flex justify-content-center align-items-center p-3 bg-white mb-5 ${styles.bgSmoke}`}
             >
               <Card.Img
-                className="w-75 rounded-circle mb-4"
+                className={`w-75 rounded-circle mb-4 ${styles.cardImg}`}
                 variant="top"
                 src="./images/blank-profile-picture-973460_1280.png"
               />
               <Card.Title>Kotyba KM</Card.Title>
               <Row className="mt-5 w-75">
                 <Col
-                  lg={6}
+                  xs={6}
                   className="d-flex justify-content-center align-items-center"
                 >
                   <h6>مهتم</h6>
                 </Col>
                 <Col
-                  lg={6}
+                  xs={6}
                   className="d-flex justify-content-center align-items-center"
                 >
                   <h6>المنشورات</h6>
@@ -50,13 +51,13 @@ export default function ProfileHero() {
               </Row>
               <Row className="w-75 ">
                 <Col
-                  lg={6}
+                  xs={6}
                   className="d-flex justify-content-center align-items-center"
                 >
                   <h6>0</h6>
                 </Col>
                 <Col
-                  lg={6}
+                  xs={6}
                   className="d-flex justify-content-center align-items-center liht"
                 >
                   <h6>0</h6>
@@ -85,8 +86,9 @@ export default function ProfileHero() {
             </Card>
           </Col>
           <Col
-            lg={8}
-            className={`d-flex flex-column align-items-center pe-0 ${styles.bgSmoke} `}
+            md={8}
+            sm={11}
+            className={`d-flex flex-column align-items-center mb-5 p-0 ${styles.postsContainer} ${styles.bgSmoke} `}
           >
             <Row
               style={{ gap: "1.5px", backgroundColor: "#0000007a" }}
@@ -112,26 +114,38 @@ export default function ProfileHero() {
             <Row className="w-100 h-100">
               <Col
                 xl={12}
-                className={`text-center mt-5 ${styles.tabPostsContent} ${
-                  toggleState === 1 ? styles.contentActive : ""
-                }`}
+                className={`d-flex justify-content-center text-center mt-5  ${
+                  styles.tabPostsContent
+                } ${toggleState === 1 ? styles.contentActive : ""}`}
               >
-                <Row className="w-100 h-100 gap-2 bg-warning">
-                  <Col className={`h-50 ${styles.myPosts} `}></Col>
-                  <Col className={`h-50 ${styles.myPosts} `}></Col>
-                  <Col className={`h-50 ${styles.myPosts} `}></Col>
+                <Row className={`w-100 h-100 bg-warning`}>
+                  <Col xs={4} className="p-0">
+                    <div className={` ${styles.myPosts}`}></div>
+                  </Col>
+                  <Col xs={4} className="p-0">
+                    <div className={` ${styles.myPosts}`}></div>
+                  </Col>
+                  <Col xs={4} className="p-0">
+                    <div className={` ${styles.myPosts}`}></div>
+                  </Col>
                 </Row>
               </Col>
               <Col
                 xl={12}
-                className={`text-center mt-5 ${styles.tabImportantContent} ${
-                  toggleState === 2 ? styles.contentActive : ""
-                }`}
+                className={`d-flex justify-content-center text-center mt-5 ${
+                  styles.tabImportantContent
+                } ${toggleState === 2 ? styles.contentActive : ""}`}
               >
-                <Row className="w-100 h-100 gap-2 bg-danger">
-                  <Col className={`h-50 ${styles.myPosts} `}></Col>
-                  <Col className={`h-50 ${styles.myPosts} `}></Col>
-                  <Col className={`h-50 ${styles.myPosts} `}></Col>
+                <Row className={`w-100 h-100 bg-danger`}>
+                  <Col xs={4} className="p-0">
+                    <div className={` ${styles.myPosts}`}></div>
+                  </Col>
+                  <Col xs={4} className="p-0">
+                    <div className={` ${styles.myPosts}`}></div>
+                  </Col>
+                  <Col xs={4} className="p-0">
+                    <div className={` ${styles.myPosts}`}></div>
+                  </Col>
                 </Row>
               </Col>
             </Row>
