@@ -1,0 +1,15 @@
+.body, html {
+  width: 100dvw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+.bgSmoke {
+  background-color: whitesmoke;
+}
+.titleHero {
+  font-family: 'wahran';
+  font-size: 4rem;
+  user-select: none;
+  border-bottom: 3px solid black ;
+}
