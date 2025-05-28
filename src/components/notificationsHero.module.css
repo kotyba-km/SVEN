@@ -1,15 +1,93 @@
 .body, html {
   width: 100dvw;
+  height: 100dvh;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
 .bgSmoke {
   background-color: whitesmoke;
+  min-height: calc(100dvh - 326px);
 }
 .titleHero {
+  width: 90%;
   font-family: 'wahran';
   font-size: 4rem;
   user-select: none;
-  border-bottom: 3px solid black ;
+  border-bottom: 3px dotted black ;
 }
+.newNotif {
+  background-color: #55C7E6;
+}
+.notificationsContainer {
+  min-height: 325.19px;
+}
+.notifications {
+  width: 100%;
+  margin-top: 30px;
+  background-color: white;
+  list-style: none;
+  padding: 0 10px;
+}
+.notification {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: whitesmoke;
+  margin: 8px 0;
+  height: 50px;
+  position: relative;
+}
+.notifIcon {
+  width: 50px;
+  height: 100%;
+  border-right: 1px solid rgb(186, 186, 186);
+  margin-right: 20px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notificationDate {
+  position: absolute;
+  right: 10px;
+  font-size: 0.9rem;
+  color: rgb(85, 85, 85);
+}
+.notifFilter {
+  width: 50px;
+  height: 50px;
+}
+.notifFilter:hover {
+  filter: brightness(0.85);
+  cursor: pointer;
+}
+.notifFilter:active {
+  background-color: gray !important;
+}
+@media (max-width: 768px) {
+  .titleHero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+}
+@media (max-width: 576px) {
+  .notificationsContainer {
+    flex-direction: column-reverse;
+  }
+  .notifFilterContainer {
+    height: 85.5px !important;
+    width: 243.89px !important;
+    flex-direction: row !important;
+  }
+  .notifications {
+    margin-top: 10px;
+    border-top: 2px dotted black;
+  }
+  .notifFilterCol {
+    margin-top: 10px;
+    height: 90px !important;
+  }
+ }

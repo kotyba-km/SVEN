@@ -101,6 +101,9 @@ body {
   .logo {
     width: 60%
   }
+  .panelLink {
+    font-size: medium;
+  }
 }
 @media (max-width: 576px) {
   body,html {

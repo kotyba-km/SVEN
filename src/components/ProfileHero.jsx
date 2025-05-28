@@ -22,7 +22,8 @@ export default function ProfileHero() {
       <Container className={`w-100 pt-4 mx-0 ${styles.profileContainer}`}>
         <Row className={`justify-content-center`}>
           <Col
-            md={4}
+            md={3}
+            xxl={4}
             sm={11}
             className={`d-flex justify-content-center align-items-center ${styles.acountContainer}`}
           >
@@ -86,7 +87,8 @@ export default function ProfileHero() {
             </Card>
           </Col>
           <Col
-            md={8}
+            md={7}
+            xxl={8}
             sm={11}
             className={`d-flex flex-column align-items-center mb-5 p-0 ${styles.postsContainer} ${styles.bgSmoke} `}
           >

@@ -4,12 +4,6 @@ body, html {
 .bgSmoke {
   background-color: whitesmoke !important;
 }
-.RowContainer {
-
-}
-.acountContainer {
-
-}
 .postsContainer {
   border: 1.5px solid #0000007a;
   border-top: none;
@@ -70,6 +64,7 @@ body, html {
 .cardListItem:last-of-type::after {
   content: '';
 }
+
 @media (max-width: 992px) {
   .profileContainer{
     min-width: 100% !important;
