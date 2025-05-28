@@ -38,6 +38,13 @@
   height: 50px;
   position: relative;
 }
+.notification:hover {
+  cursor: pointer;
+  filter: brightness(0.95);
+}
+.notification:active {
+  filter: brightness(0.9);
+}
 .notifIcon {
   width: 50px;
   height: 100%;
@@ -52,17 +59,54 @@
   right: 10px;
   font-size: 0.9rem;
   color: rgb(85, 85, 85);
+  user-select: none;
 }
 .notifFilter {
   width: 50px;
   height: 50px;
+  font-size: large;
+  transition: all 0.2s;
 }
 .notifFilter:hover {
   filter: brightness(0.85);
   cursor: pointer;
 }
 .notifFilter:active {
-  background-color: gray !important;
+  background-color: gray;
+}
+.filterClicked {
+  background-color: rgb(172, 172, 172);
+  font-size: medium;
+  color: #3e8ea3;
+}
+@media (min-width: 2000px) {
+  .notifications {
+    min-height: 200%;
+  }
+  .notification {
+    height: 100px;
+    font-size: 28px;
+  }
+  .notificationDate {
+    font-size: 24px;
+  }
+  .notifFilterContainer {
+    width: 150px !important;
+    height: 310px !important;
+  }
+  .notifFilter {
+    width: 80px;
+    height: 80px;
+    font-size: xx-large;
+  }
+}
+@media (max-width: 992px) {
+  .notificationDate {
+    font-size: small;
+  }
+  .notification {
+    font-size: 14px;
+  }
 }
 @media (max-width: 768px) {
   .titleHero {
@@ -71,6 +115,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
+  }
+  .notification {
+    font-size: 16px;
+  }
+  .notifications {
+    width: 200% !important;
   }
 }
 @media (max-width: 576px) {
@@ -89,5 +139,13 @@
   .notifFilterCol {
     margin-top: 10px;
     height: 90px !important;
+  }
+ }
+ @media (max-width: 400px) {
+  .notification {
+    font-size: 12px;
+  }
+  .notificationDate {
+    font-size: 10px;
   }
  }

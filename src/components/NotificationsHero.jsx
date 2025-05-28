@@ -9,7 +9,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import { useState } from "react";
 export default function NotificationsHero() {
+  const [filterState, setFilterState] = useState(1);
+  const optionFilter = (index) => {
+    setFilterState((prev) => (prev === index ? null : index));
+  };
   return (
     <div className={`w-100 ${styles.bgSmoke}`}>
       <h1 className={` m-auto text-center ${styles.titleHero}`}>
@@ -23,7 +28,13 @@ export default function NotificationsHero() {
       <Row
         className={`d-flex justify-content-end ${styles.notificationsContainer}`}
       >
-        <Col md={6} sm={10} xs={12} className="d-flex justify-content-center">
+        <Col
+          lg={6}
+          md={8}
+          sm={10}
+          xs={12}
+          className="d-flex justify-content-center"
+        >
           <ul className={`${styles.notifications}`}>
             <li className={`${styles.notification}`}>
               <span className={`${styles.notifIcon}`}>
@@ -98,17 +109,27 @@ export default function NotificationsHero() {
             className={`d-flex flex-column justify-content-center align-items-center h-75 bg-white rounded-pill border border-black-50 ${styles.notifFilterContainer}`}
           >
             <div
-              className={`d-flex justify-content-center align-items-center bg-light rounded-circle m-1 border border-black-50 ${styles.notifFilter}`}
+              onClick={() => optionFilter(1, true)}
+              className={`d-flex justify-content-center align-items-center rounded-circle m-1 border border-black-50 ${
+                styles.notifFilter
+              } ${filterState === 1 ? styles.filterClicked : ""}`}
             >
               <FontAwesomeIcon icon={faEnvelope} />
             </div>
             <div
-              className={`d-flex justify-content-center align-items-center bg-light rounded-circle m-1 border border-black-50 ${styles.notifFilter}`}
+              onClick={() => optionFilter(2)}
+              className={`d-flex justify-content-center align-items-center rounded-circle m-1 border border-black-50 ${
+                styles.notifFilter
+              } ${filterState === 2 ? styles.filterClicked : ""}`}
             >
               <FontAwesomeIcon icon={faEnvelopeOpen} />
             </div>
             <div
-              className={`d-flex justify-content-center align-items-center bg-light rounded-circle m-1 border border-black-50 ${styles.notifFilter}`}
+              onClick={() => optionFilter(3)}
+              className={`d-flex justify-content-center align-items-center rounded-circle m-1 border border-black-50 ${
+                styles.notifFilter
+              } 
+              ${filterState === 3 ? styles.filterClicked : ""}`}
             >
               <FontAwesomeIcon icon={faCalendarDay} />
             </div>
