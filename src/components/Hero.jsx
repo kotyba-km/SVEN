@@ -2,13 +2,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./hero.module.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { useNavigate } from "react-router-dom";
 export default function Hero() {
+  const navigate = useNavigate();
+  const routeMe = () => {
+    navigate("/post");
+  };
   return (
     <div
       className={`w-100 d-flex flex-column justify-content-start align-items-center pt-5 ${styles.hero}`}
     >
       <Row className={` ${styles.postWrap}`}>
         <Col
+          onClick={routeMe}
           lg={2}
           className={`bg-white rounded-3 d-flex flex-column m-2 ${styles.post}`}
         >
