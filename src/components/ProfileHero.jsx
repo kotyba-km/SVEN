@@ -9,7 +9,12 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import { useState } from "react";
 import ListGroup from "react-bootstrap/ListGroup";
-import { faGear, faQuestion } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBoxArchive,
+  faGear,
+  faQuestion,
+  faRectangleList,
+} from "@fortawesome/free-solid-svg-icons";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons/faQuestionCircle";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons/faExclamationCircle";
 export default function ProfileHero() {
@@ -102,6 +107,7 @@ export default function ProfileHero() {
                   toggleState === 2 ? styles.active : ""
                 }`}
               >
+                <FontAwesomeIcon className="pe-2" icon={faBoxArchive} />
                 مهمة
               </Col>
               <Col
@@ -110,6 +116,7 @@ export default function ProfileHero() {
                   toggleState === 1 ? styles.active : ""
                 }`}
               >
+                <FontAwesomeIcon className="pe-2" icon={faRectangleList} />
                 منشوراتي
               </Col>
             </Row>
