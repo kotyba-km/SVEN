@@ -52,9 +52,38 @@
   border-radius: 10px;
 }
 .postTitle {
+  font-family: 'BankGothic Md BT', sans-serif;
+  font-family: 'Bank Gothic Light', sans-serif;
+  font-family:'BankGothic', sans-serif;
+  font-weight: bolder;
   display: flex;
   justify-content: space-between;
-  background-color: beige;
   width: 66%;
   margin-top: 20px;
+  border-bottom: 1px solid gray
+}
+.interestedBtn {
+  font-family: 'wahran';
+  font-weight: bolder;
+  width: 100px;
+  height: 40px;
+  font-size: large;
+  border: 1px solid black;
+  background: whitesmoke;
+  border-radius: 20px;
+  transition: all 0.2s
+}
+.interestedBtn svg {
+  width: 30.5px;
+  transition: all 0.2s
+}
+.interestedBtn:hover {
+  filter: brightness(0.85);
+}
+.interestedBtn:active svg {
+  transform: translateY(-10px);
+}
+.intBtnClicked {
+  background-color: rgb(26, 26, 26);
+  color: white;
 }

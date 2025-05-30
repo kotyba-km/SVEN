@@ -3,18 +3,21 @@ body, html {
 }
 .bgSmoke {
   background-color: whitesmoke !important;
+  font-family: 'wahran';
 }
 .postsContainer {
   border: 1.5px solid #0000007a;
   border-top: none;
 }
 .tabPosts {
+  font-family: 'Wahran';
   background-color: #d1d1d1;
   border-bottom: 1.5px solid #0000007a;
   transition: all 0.15s;
   box-sizing: border-box;
 }
 .tabImportant {
+  font-family: 'Wahran';
   background-color: #d1d1d1;
   border-bottom: 1.5px solid #0000007a;
   transition: all 0.15s;

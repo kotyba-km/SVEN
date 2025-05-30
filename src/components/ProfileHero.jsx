@@ -40,7 +40,9 @@ export default function ProfileHero() {
                 variant="top"
                 src="./images/blank-profile-picture-973460_1280.png"
               />
-              <Card.Title>Kotyba KM</Card.Title>
+              <Card.Title style={{ fontFamily: "Segoe UI" }}>
+                Kotyba KM
+              </Card.Title>
               <Row className="mt-5 w-75">
                 <Col
                   xs={6}
