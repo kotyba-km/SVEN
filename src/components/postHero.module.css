@@ -51,7 +51,11 @@
   border: 3px solid black;
   border-radius: 10px;
 }
+.postDetails {
+  height: 400px;
+}
 .postTitle {
+  height: 100px;
   font-family: 'BankGothic Md BT', sans-serif;
   font-family: 'Bank Gothic Light', sans-serif;
   font-family:'BankGothic', sans-serif;
@@ -75,7 +79,7 @@
 }
 .interestedBtn svg {
   width: 30.5px;
-  transition: all 0.2s
+  transition: all 0.15s
 }
 .interestedBtn:hover {
   filter: brightness(0.85);
@@ -86,4 +90,12 @@
 .intBtnClicked {
   background-color: rgb(26, 26, 26);
   color: white;
+}
+.postOwner {
+  width: 33%;
+  margin-top: 20px;
+  padding: 20px;
+}
+.ownerImg {
+  background: none;
 }

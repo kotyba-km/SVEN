@@ -38,7 +38,7 @@ export default function ProfileHero() {
               <Card.Img
                 className={`w-75 rounded-circle mb-4 ${styles.cardImg}`}
                 variant="top"
-                src="./images/blank-profile-picture-973460_1280.png"
+                src="./images/profilePicture.png"
               />
               <Card.Title style={{ fontFamily: "Segoe UI" }}>
                 Kotyba KM
