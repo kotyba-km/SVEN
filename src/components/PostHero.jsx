@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./postHero.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faB,
   faBox,
   faBoxOpen,
   faPhone,
@@ -13,6 +12,7 @@ import { useState } from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { Table } from "react-bootstrap";
 export default function PostHero() {
   const [isInterested, setIsInterested] = useState(true);
   const toggleLike = () => {
@@ -36,11 +36,9 @@ export default function PostHero() {
           <img src="./images/car1.jpg" alt="" />
         </div>
       </div>
-      <div className={`w-100 d-flex mb-4 ${styles.postDetails}`}>
-        {" "}
-        {/*title */}
-        <div className={`me-4 ${styles.postTitle}`}>
-          <div>
+      <div className={`my-3 ${styles.overviewContainr}`}>
+        <div className={`${styles.postTitle}`}>
+          <div className="w-50">
             <h3 className="text-danger">
               SP <span>49,800,000</span>
             </h3>
@@ -52,20 +50,64 @@ export default function PostHero() {
               <span>104,024</span> <b>Km</b>
             </h5>
           </div>
-          <button
-            onClick={toggleLike}
-            className={`align-self-center me-2 ${styles.interestedBtn} ${
-              isInterested ? "" : styles.intBtnClicked
-            }`}
-          >
-            <FontAwesomeIcon
-              className="pe-2"
-              icon={isInterested ? faBoxOpen : faBox}
-            />
-            مهتم
-          </button>
+          <div className="w-50 me-3 d-flex justify-content-end">
+            <button
+              onClick={toggleLike}
+              className={`rounded-pill ${styles.interestedBtn} ${
+                isInterested ? "" : styles.intBtnClicked
+              }`}
+            >
+              <FontAwesomeIcon
+                className="pe-2"
+                icon={isInterested ? faBoxOpen : faBox}
+              />
+              مهتم
+            </button>
+          </div>
         </div>
-        <div className={`float-end ${styles.postOwner}`}>
+        <div
+          className={`d-flex flex-column align-items-end p-4 ${styles.overviewDetails}`}
+        >
+          <h2>
+            <b>
+              تفاصيل <span>السيارة</span>
+            </b>
+          </h2>
+          <Table
+            borderless
+            style={{ direction: "rtl" }}
+            className={`fs-4 ${styles.overviewTable}`}
+          >
+            <tbody>
+              <tr>
+                <td>لون السيارة الخارجي</td>
+                <td className="border-start border-black">بنفسجي غامق</td>
+                <td>قوة الأحصنة</td>
+                <td>600-700HP</td>
+              </tr>
+              <tr>
+                <td>لون السيارة الداخلي</td>
+                <td className="border-start border-black">سكري</td>
+                <td>نوع الوقود</td>
+                <td>بانزين</td>
+              </tr>
+              <tr>
+                <td>عدد الأبواب</td>
+                <td className="border-start border-black">4</td>
+                <td>عدد المقاعد</td>
+                <td>5-7</td>
+              </tr>
+              <tr>
+                <td>سعة البطارية</td>
+                <td className="border-start border-black">+kWh 100</td>
+                <td>نوع ناقل الحركة</td>
+                <td>أوتوماتيك</td>
+              </tr>
+            </tbody>
+          </Table>
+        </div>
+
+        <div className={`ms-3 float-end`}>
           <Card className="d-flex flex-row align-items-center border-0 bg-transparent">
             <Card.Img
               style={{ width: "100px" }}
